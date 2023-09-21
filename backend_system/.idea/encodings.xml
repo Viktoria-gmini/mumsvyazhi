@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java/com/knitwearteam/backend_system/Services/ProductService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java/com/knitwearteam/backend_system/controller/HomeController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java/com/knitwearteam/backend_system/controller/ImageController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java/com/knitwearteam/backend_system/model/Image.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java/com/knitwearteam/backend_system/model/Product.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java/com/knitwearteam/backend_system/repository/ImageRepository.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/java/com/knitwearteam/backend_system/repository/ProductRepository.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend_system/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

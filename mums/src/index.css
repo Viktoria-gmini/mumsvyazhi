@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  font-family: Montserrat, serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+/*______________Promo______________*/
+
+.promo_ph img{
+  margin-top: -20%;
+}
+.bttn{
+  margin-top: 150px !important;
+  height: 50px;
+  width: 150px;
+  border: 2px solid black;
+  background: #F7E9DB;
+}
+.bttn:hover{
+  background: #F8DCC0;
+}
+.bttn_promo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*______________Main_______________*/
+.main{
+  display: flex;
+  background: linear-gradient(#F8AC8E, #F39B42, #FC937D );
+  height: 2154px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: -100px;
+}
+.froggy{
+  margin-right: 64px;
+  margin-top: 64px;
+  margin-left: -130px;
+}
+.product,
+.card {
+  margin-right: 64px;
+  margin-top: 64px;
+  width: 288px;
+  height: 400px;
+}
+.card_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+.card-img{
+  height: 307px;
+  background: #fff;
+}
+.img{
+  height: 307px;
+  width: 288px;
+}
+.card-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 93px;
+  width: 288px;
+  background: #000;
+}
+.card-text p {
+  color: white;
+}
+.card-name{
+  padding-top: 1em;
+}
+
+/*______________Footer_____________*/
+.footer{
+  background: #000;
+  height: 960px;
+}
+.footer_text{
+  color:white;
+}
+.footer_flex{
+  padding: 4em;
+}
+.footer_flex img{
+  position: absolute;
+  z-index: 2;
+  margin-top: -520px !Important;
+  margin-left: 545px;
+}
+.carousel{
+  display: block;
+  height: 320px;
+  width: 740px;
+  border: black;
+  background: #F7E9DB;
+
+}
+
+.footer_text_cus {
+  font-size: 4rem;
+}
+.footer_text_disc{
+  max-width: 740px;
+}
+
