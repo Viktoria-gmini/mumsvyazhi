@@ -1,11 +1,10 @@
 package com.knitwearteam.backend_system.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.*;
-
 import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.JdbcType;
+import org.hibernate.type.descriptor.jdbc.VarbinaryJdbcType;
 
 @Entity
 @Table(name = "images")
@@ -30,7 +29,8 @@ public class Image {
     @Column(name = "isPreviewImage")
     private boolean isPreviewImage;
     @Lob
-    @Column(name = "bytes", columnDefinition = "longblob")
+    @JdbcType(VarbinaryJdbcType.class)
+    @Column(name="bytes")
     private byte[] bytes;
     @ToString.Exclude
     @JsonIgnore
