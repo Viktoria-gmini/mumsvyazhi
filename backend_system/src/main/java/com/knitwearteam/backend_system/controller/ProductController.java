@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin(origins = "https://mumsik.onrender.com")
+@CrossOrigin(origins = {"*"})
 @RestController
 @RequestMapping("/products")
 public class ProductController {
