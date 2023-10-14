@@ -4,9 +4,9 @@ import { Buffer } from 'buffer';
 // // @ts-ignore
 // window.Buffer = Buffer;
 
-const PRODUCT_API_URL = "http://localhost:8083/products/";
-const IMAGE_API_URL = "http://localhost:8083/images/";
-const IMAGES_OF_PRODUCT_API_URL = "http://localhost:8083/images/products/";
+const PRODUCT_API_URL = "http://mumsik.onrender.com/products/";
+
+const IMAGES_OF_PRODUCT_API_URL = "http://mumsik.onrender.com/images/products/";
 export class ProductService {
     static getProducts(){
         return axios.get(PRODUCT_API_URL + "all");
