@@ -6,7 +6,7 @@ import { Buffer } from 'buffer';
 
 const PRODUCT_API_URL = "http://mumsik.onrender.com/products/";
 
-const IMAGES_OF_PRODUCT_API_URL = "http://mumsik.onrender.com/images/products/";
+const IMAGES_OF_PRODUCT_API_URL = "http://mumsik.onrender.com/images/product/";
 export class ProductService {
     static getProducts(){
         return axios.get(PRODUCT_API_URL + "all");
