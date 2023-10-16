@@ -18,10 +18,11 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/images")
 public class ImageController {
     private final ImageRepository imageRepository;
     private final ProductRepository repo ;
-    @GetMapping("/images/{idImage}")
+    @GetMapping("/{idImage}")
     private ResponseEntity<?> getImageById(@PathVariable Long idImage) {
         Image image = imageRepository.findById(idImage).orElse(null);
 //        String encoded = Base64.getEncoder().encodeToString("Hello".getBytes());
@@ -32,20 +33,20 @@ public class ImageController {
                 .contentLength(image.getSize())
                 .body(new InputStreamResource(new ByteArrayInputStream(image.getBytes())));
     }
-    @RequestMapping(value = "/images/get/{id}", method = RequestMethod.GET)
-    public void getImageAsByteArray(@PathVariable Long id, HttpServletResponse response) throws IOException {
-        Image image = imageRepository.findById(id).orElse(null);
+    @RequestMapping(value = "/get/{idImage}", method = RequestMethod.GET)
+    public void getImageAsByteArray(@PathVariable Long idImage, HttpServletResponse response) throws IOException {
+        Image image = imageRepository.findById(idImage).orElse(null);
         assert image != null;
         InputStream in = new ByteArrayInputStream(image.getBytes());
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         IOUtils.copy(in, response.getOutputStream());
     }
-    @GetMapping("/images/all")
+    @GetMapping("/all")
     List<Image> getAll(){
         return imageRepository.findAll();
     }
 
-    @GetMapping("images/product/{idProduct}")
+    @GetMapping("/product/{idProduct}")
     private List<Image> getImagesByProductId(@PathVariable Long idProduct){
         return imageRepository.findAllByProduct(repo.findById(idProduct));
     }
