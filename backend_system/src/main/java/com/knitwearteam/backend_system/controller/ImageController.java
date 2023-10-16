@@ -15,7 +15,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequiredArgsConstructor
 public class ImageController {
@@ -25,6 +25,7 @@ public class ImageController {
     private ResponseEntity<?> getImageById(@PathVariable Long idImage) {
         Image image = imageRepository.findById(idImage).orElse(null);
 //        String encoded = Base64.getEncoder().encodeToString("Hello".getBytes());
+        assert image != null;
         return ResponseEntity.ok()
                 .header("fileName", image.getOriginalFileName())
                 .contentType(MediaType.valueOf(image.getContentType()))
@@ -34,6 +35,7 @@ public class ImageController {
     @RequestMapping(value = "/images/get/{id}", method = RequestMethod.GET)
     public void getImageAsByteArray(@PathVariable Long id, HttpServletResponse response) throws IOException {
         Image image = imageRepository.findById(id).orElse(null);
+        assert image != null;
         InputStream in = new ByteArrayInputStream(image.getBytes());
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         IOUtils.copy(in, response.getOutputStream());

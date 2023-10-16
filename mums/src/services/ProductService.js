@@ -4,9 +4,9 @@ import { Buffer } from 'buffer';
 // // @ts-ignore
 // window.Buffer = Buffer;
 
-const PRODUCT_API_URL = "http://mumsik.onrender.com/products/";
+const PRODUCT_API_URL = "https://mumsik.onrender.com/products/";
 
-const IMAGES_OF_PRODUCT_API_URL = "http://mumsik.onrender.com/images/product/";
+const IMAGE_URL = "https://mumsik.onrender.com/images/";
 export class ProductService {
     static getProducts(){
         return axios.get(PRODUCT_API_URL + "all");
@@ -15,8 +15,8 @@ export class ProductService {
         return axios.get(PRODUCT_API_URL+id);
     }
 
-    static getImageByProductId(id) {
-        var url = IMAGES_OF_PRODUCT_API_URL + id
+    static getImageById(id) {
+        var url = IMAGE_URL + id
 
         return axios.get(url);
     }

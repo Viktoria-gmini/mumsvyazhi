@@ -17,7 +17,7 @@ function Card(props) {
                 newpreviewImage=value
             }
         })
-        const url = "http://localhost:8083/images/"+newpreviewImage
+        const url = "http://mumsik.onrender.com/images/"+newpreviewImage
         function getImage(url){
             let image = new Image();
             ProductService.getImageByURL(url).then((res) => {
@@ -32,7 +32,7 @@ function Card(props) {
                 });
             return image
         }
-        let previewImage = getImage(url)
+        getImage(url)
     }, []);
     if (state === 'error')
         return (
