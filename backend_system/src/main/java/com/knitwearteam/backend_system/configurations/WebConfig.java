@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedMethods("GET, POST, PUT, DELETE, UPDATE")
-                .allowedHeaders("Requestor-Type,Origin, X-Requested-With, Content-Type, Accept")
+                .allowedOrigins("http://localhost:8080, https://mumsik.onrender.com")
                 .exposedHeaders("X-Get-Header")
                 .maxAge(3600);
     }
