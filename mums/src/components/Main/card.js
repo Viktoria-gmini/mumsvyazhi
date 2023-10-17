@@ -48,7 +48,7 @@ function Card(props) {
                 ) : (
                     <div className="card">
                         <div className="card-img">
-                            <img className= "img" src={Base64}/>
+                            <img className= "img" src={Base64} crossOrigin="use-credentials" alt={"product"}/>
                         </div>
                         <div className="card-text">
                             <p className="card-name">{props.product.title}</p>
