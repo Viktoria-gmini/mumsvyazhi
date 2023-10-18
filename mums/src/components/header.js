@@ -11,8 +11,15 @@ import Home from "../pages/home";
 import FaqQ from "../pages/faqQ";
 import Cart from "../pages/Cart";
 
+
+
+// EБТВОЮ МАТЬ Я ЛЮБЛЮ ТВОИ ВОЛОСЫ Я ХОЧУ СПАТЬ С ТОБОЙ Я ХОЧУ СТАТЬ ТОБОЙ
+
+
+
 export default class Header extends Component {
     render() {
+
         return (
             // Запись франгмента для роутера
             <>
