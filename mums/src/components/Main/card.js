@@ -1,8 +1,5 @@
-
+import React, {useEffect, useState} from "react";
 import {ProductService} from "../../services/ProductService";
-import React, { useState } from "react";
-import { useEffect } from "react";
-
 
 function Card(props) {
     const [Base64, setBase64] = useState('');
@@ -17,22 +14,37 @@ function Card(props) {
                 newpreviewImage=value
             }
         })
-        const url = "http://mumsik.onrender.com/images/"+newpreviewImage
-        function getImage(url){
-            let image = new Image();
-            ProductService.getImageByURL(url).then((res) => {
-                image.src = 'data:image/jpg;base64,'+res;
+        const url = ProductService.GET_IMAGES()+newpreviewImage
+
+        // function getImage(url){
+        //     let image = new Image();
+        //     ProductService.getImageByURL(url).then((res) => {
+        //         image.src = 'data:image/jpg;base64,'+res;
+        //         setState('success');
+        //         setBase64(image.src);
+        //     })
+        //         .catch((err) => {
+        //             console.error('Error:', err);
+        //             setState('error');
+        //             setError(err);
+        //         });
+        //     return image
+        // }
+        // getImage(url)
+        console.log(url)
+        fetch(url)
+            .then(response => response.blob())
+            .then(blob => {
+                let image = new Image()
+                console.log(url)
+                console.log(blob)
+                image.src = URL.createObjectURL(blob);
                 setState('success');
                 setBase64(image.src);
             })
-                .catch((err) => {
-                    console.error('Error:', err);
-                    setState('error');
-                    setError(err);
-                });
-            return image
-        }
-        getImage(url)
+            .catch(error => {
+                console.error('Error fetching image:', error);
+            });
     }, []);
     if (state === 'error')
         return (
@@ -48,7 +60,7 @@ function Card(props) {
                 ) : (
                     <div className="card">
                         <div className="card-img">
-                            <img className= "img" src={Base64} crossOrigin="use-credentials" alt={"product"}/>
+                            <img className= "img" src={Base64} crossOrigin="anonymous" alt={"product"}/>
                         </div>
                         <div className="card-text">
                             <p className="card-name">{props.product.title}</p>

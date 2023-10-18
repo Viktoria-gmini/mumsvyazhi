@@ -1,13 +1,15 @@
 import axios from "axios";
-import { Buffer } from 'buffer';
 //
 // // @ts-ignore
 // window.Buffer = Buffer;
+const LOCALHOST = "http://localhost:8083"
+const RENDERHOST = "https://mumsik.onrender.com"
+let HOST = RENDERHOST
+const PRODUCT_API_URL = HOST+"/products/";
+const IMAGE_URL = HOST+"/images/get/";
 
-const PRODUCT_API_URL = "https://mumsik.onrender.com/products/";
-
-const IMAGE_URL = "https://mumsik.onrender.com/images/";
 export class ProductService {
+
     static getProducts(){
         return axios.get(PRODUCT_API_URL + "all");
     }
@@ -15,18 +17,26 @@ export class ProductService {
         return axios.get(PRODUCT_API_URL+id);
     }
 
-    static getImageById(id) {
-        var url = IMAGE_URL + id
-
-        return axios.get(url);
+    static GET_IMAGES() {
+        return IMAGE_URL
     }
 
     static getImageByURL(url){
-        const promise = axios
-            .get(url, {
-                responseType: 'arraybuffer'
+        return axios({
+            method: 'GET',
+            url: url,
+            responseType: 'blob'
+        })
+            .then(response => {
+                // Handle the response
+                // Process the blob data as needed
+                return response.data;
             })
-        return promise.then(response => Buffer.from(response.data, 'binary').toString('base64'))
+            .catch(error => {
+                // Handle any errors
+                console.error('Error retrieving blob data:', error);
+                throw error;
+            });
     }
 
 }

@@ -34,12 +34,14 @@ public class ImageController {
                 .body(new InputStreamResource(new ByteArrayInputStream(image.getBytes())));
     }
     @RequestMapping(value = "/get/{idImage}", method = RequestMethod.GET)
-    public void getImageAsByteArray(@PathVariable Long idImage, HttpServletResponse response) throws IOException {
+    @ResponseBody
+    public String getImageAsByteArray(@PathVariable Long idImage, HttpServletResponse response) throws IOException {
         Image image = imageRepository.findById(idImage).orElse(null);
         assert image != null;
         InputStream in = new ByteArrayInputStream(image.getBytes());
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         IOUtils.copy(in, response.getOutputStream());
+        return java.util.Base64.getEncoder().encodeToString(image.getBytes());
     }
     @GetMapping("/all")
     List<Image> getAll(){

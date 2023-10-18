@@ -18,15 +18,15 @@ public class WebConfig {
                         .allowedMethods("*")
                         .allowCredentials(true);
             }
-            @Override
-            public void addResourceHandlers(ResourceHandlerRegistry registry) {
-                registry
-                        .addResourceHandler("/images/**")
-                        .addResourceLocations("/images/")
-                        .setCachePeriod(3600)
-                        .resourceChain(true)
-                        .addResolver(new PathResourceResolver());
-            }
+//            @Override
+//            public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//                registry
+//                        .addResourceHandler("/images/**")
+//                        .addResourceLocations("/images/")
+//                        .setCachePeriod(3600)
+//                        .resourceChain(true)
+//                        .addResolver(new PathResourceResolver());
+//            }
         };
     }
 }
