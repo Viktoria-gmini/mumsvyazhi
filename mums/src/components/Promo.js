@@ -9,7 +9,7 @@ class Promo extends Component {
                 <Row>
                     <Col className='bttn_promo'>
                         <button className="bttn">
-                            Hover Me
+                             КУПИТЬ
                         </button>
                     </Col>
                     <Col className='promo_ph xs={6}'>
@@ -24,7 +24,7 @@ class Promo extends Component {
                     </Col>
                     <Col className='bttn_promo'>
                         <button className="bttn">
-                            Hover Me
+                            КАСТОМ
                         </button>
                     </Col>
                 </Row>

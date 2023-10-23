@@ -13,7 +13,7 @@ code {
 }
 
 *{
-  font-family: Montserrat, serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -33,11 +33,13 @@ code {
   margin-top: -20%;
 }
 .bttn{
-  margin-top: 150px !important;
+  margin-top: 250px !important;
   height: 50px;
-  width: 150px;
+  width: 158px;
+  font-size: 28px;
   border: 2px solid black;
   background: #F7E9DB;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.8);
 }
 .bttn:hover{
   background: #F8DCC0;
@@ -48,24 +50,37 @@ code {
   align-items: center;
 }
 /*______________Main_______________*/
-.main{
+.main_osn{
   display: flex;
   background: linear-gradient(#F8AC8E, #F39B42, #FC937D );
   height: 2154px;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   margin-top: -100px;
 }
+
 .froggy{
-  margin-right: 64px;
-  margin-top: 64px;
-  margin-left: -130px;
+  margin-left: -125px;
+}
+.card_flex{
+  display: flex;
+  width: 1119px;
+  height: 1984px;
+
+  justify-content: center;
+}
+.card_flex main{
+  display: flex;
+  width: 1119px;
+  max-height: 1984px;
+  height: 60%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 .product,
 .card {
-  margin-right: 64px;
-  margin-top: 64px;
   width: 288px;
   height: 400px;
 }

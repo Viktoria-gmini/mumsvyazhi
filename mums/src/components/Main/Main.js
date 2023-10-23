@@ -25,10 +25,12 @@ const Main = () =>{
             }
         return (
            <>
-               <div className='main'>
+               <div className='main_osn'>
                         <div className="d-flex justify-content-around card_wrap">
                             <Container>
-                                <Products products = {prodList} />
+                                    <div className="card_flex">
+                                        <Products products = {prodList} />
+                                    </div>
                             </Container>
                         </div>
                </div>

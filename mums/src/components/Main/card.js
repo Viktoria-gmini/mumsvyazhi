@@ -58,6 +58,7 @@ function Card(props) {
                 {state === 'loading' ? (
                     <h1>Loading...</h1>
                 ) : (
+
                     <div className="card">
                         <div className="card-img">
                             <img className= "img" src={Base64} crossOrigin="anonymous" alt={"product"}/>
