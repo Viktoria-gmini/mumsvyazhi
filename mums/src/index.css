@@ -22,11 +22,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-}
-
 /*______________Promo______________*/
 .promo_ph img{
   margin-top: -20%;
@@ -110,6 +105,35 @@ code {
 .card-name{
   padding-top: 1em;
 }
+/*______________QUESTIONS_____________*/
+
+.quest_main{
+  background: #F7E9DB;
+}
+.accor_main{
+  background: #F7E9DB;
+  width: 832px;
+  height: 406px;
+}
+.accordion-button{
+  background-color: #F7E9DB !important;
+  border: 1px solid black !important;
+}
+.accordion-body{
+  background-color: #F7E9DB !important;
+  border: 1px solid black !important;
+}
+.accor_item{
+  height: 46px;
+}
+.accor_margin{
+  margin-bottom: 46px;
+}
+.bug_photo{
+  display: flex;
+  align-items: end;
+  margin-bottom: -150px;
+}
 
 /*______________Footer_____________*/
 .footer{
@@ -136,7 +160,6 @@ code {
   background: #F7E9DB;
 
 }
-
 .footer_text_cus {
   font-size: 4rem;
 }

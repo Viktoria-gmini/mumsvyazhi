@@ -5,27 +5,17 @@ import telegram from '../img/telegram.svg';
 import instagram from '../img/insta.svg';
 import faq from '../img/faq.svg';
 import cart from '../img/cart.svg';
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Swipe from "bootstrap/js/src/util/swipe";
-import Home from "../pages/home";
-import FaqQ from "../pages/faqQ";
-import Cart from "../pages/Cart";
-
-
 
 // EБТВОЮ МАТЬ Я ЛЮБЛЮ ТВОИ ВОЛОСЫ Я ХОЧУ СПАТЬ С ТОБОЙ Я ХОЧУ СТАТЬ ТОБОЙ
-// iuiininoionoiyuyubuiiu
-
 
 export default class Header extends Component {
     render() {
 
         return (
-            // Запись франгмента для роутера
             <>
                 <Navbar  collapseOnSelect expand="md">
                     <Container>
-                        <Navbar.Brand href="/home">
+                        <Navbar.Brand href="/">
                             <img
                                 src={logo}
                                 height={117}
@@ -38,7 +28,7 @@ export default class Header extends Component {
                         <Navbar.Collapse id="responsive-navbar-nav" className='justify-content-md-end'>
                             <Nav className="justify-content-md-between">
                                 <Navbar href="/telegram" >
-                                   <Nav.Link href="/telegram">
+                                   <Nav.Link href="https://web.telegram.org/k/#@anncchh">
                                        <img
                                            src={telegram}
                                            height={74}
@@ -48,7 +38,7 @@ export default class Header extends Component {
                                        />
                                    </Nav.Link>
                                 </Navbar>
-                                    <Nav.Link href="/instagram">
+                                    <Nav.Link href="https://www.instagram.com/mamsvyzhi/">
                                         <Navbar href="/instagram">
                                             <img
                                                 src={instagram}
@@ -85,15 +75,10 @@ export default class Header extends Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                <Router>
-                    <Routes>
-                        <Route exact path="/" element={Home} />
-                        <Route exact path="/faqQ" element={FaqQ} />
-                        <Route exact path="cart" Component={Cart} />
-                    </Routes>
-                </Router>
+
             </>
         );
     }
 }
+
 

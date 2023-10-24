@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import promo_photo from '../img/promo_photo.png';
+import promo_photo from '../../img/promo_photo.png';
 import {Col, Container, Row} from "react-bootstrap";
 
 class Promo extends Component {
