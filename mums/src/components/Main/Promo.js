@@ -5,29 +5,29 @@ import {Col, Container, Row} from "react-bootstrap";
 class Promo extends Component {
     render() {
         return (
-            <Container>
-                <Row>
-                    <Col className='bttn_promo'>
+            <Container className="promo">
+                <div className="promo_padding myrow" >
+                    <div className='bttn_promo mycol'>
                         <button className="bttn">
                              КУПИТЬ
                         </button>
-                    </Col>
-                    <Col className='promo_ph xs={6}'>
+                    </div>
+                    <div className='promo_ph'>
                         <img
                             src={promo_photo}
                             height={800}
-                            width={704}
+                            width={703.88}
                             className={"d-inline-block "}
                             alt="logo"
 
                         />
-                    </Col>
-                    <Col className='bttn_promo'>
-                        <button className="bttn">
+                    </div>
+                    <div className='bttn_promo mycol'>
+                        <button className="bttn btn_right">
                             КАСТОМ
                         </button>
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </Container>
         );
     }

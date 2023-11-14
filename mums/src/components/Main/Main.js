@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-
 import {ProductService} from "../../services/ProductService.js"
 import { useState } from "react";
 import { useEffect } from "react";
 import {Products} from "./products";
-import {Container} from "react-bootstrap";
+
 
 const Main = () =>{
             const [prodList, setProdList] = useState([]);
@@ -26,13 +25,9 @@ const Main = () =>{
         return (
            <>
                <div className='main_osn'>
-                        <div className="d-flex justify-content-around card_wrap">
-                            <Container>
-                                    <div className="card_flex">
-                                        <Products products = {prodList} />
-                                    </div>
-                            </Container>
-                        </div>
+                       <div className="card_wrap">
+                           <Products products = {prodList} />
+                       </div>
                </div>
            </>
         );

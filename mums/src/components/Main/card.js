@@ -54,7 +54,7 @@ function Card(props) {
         );
 
     return (
-            <nav className="product">
+            <nav className="product justify-content-center text-center">
                 {state === 'loading' ? (
                     <h1>Loading...</h1>
                 ) : (
@@ -65,7 +65,7 @@ function Card(props) {
                         </div>
                         <div className="card-text">
                             <p className="card-name">{props.product.title}</p>
-                            <p>{props.product.price} рублей</p>
+                            <p className="price">{props.product.price} рублей</p>
                         </div>
                     </div>
                 )}

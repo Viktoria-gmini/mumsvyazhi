@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 export default class Home extends Component {
     render() {
         return (
-            <div>
+            <div className="background">
                 <Header></Header>
                 <Promo></Promo>
                 <Main></Main>
