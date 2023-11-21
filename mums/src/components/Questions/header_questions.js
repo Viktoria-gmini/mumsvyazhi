@@ -11,7 +11,7 @@ class HeaderQuestions extends Component {
     render() {
         return (
 
-            <Container>
+            <Container collapseOnSelect expand="md">
                 <Navbar className="header_menu justify-content-around" collapseOnSelect expand="md">
                     <Container>
                         <Navbar.Brand href="/">

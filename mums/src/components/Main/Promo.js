@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
-import promo_photo from '../../img/promo_photo.png';
-import {Col, Container, Row} from "react-bootstrap";
+import promo_photo from '../../img/promo_photo.svg';
+import {Container, Nav, Navbar} from "react-bootstrap";
+import Game from "../../pages/Game.js";
+import {ReactComponent as Secret_bttn}  from '../../img/secret_bttn.svg';
+
 
 class Promo extends Component {
     render() {
@@ -8,9 +11,14 @@ class Promo extends Component {
             <Container className="promo">
                 <div className="promo_padding myrow" >
                     <div className='bttn_promo mycol'>
+
+                        {/*ДОДЕЛАТЬ ЯКОРНЫЕ ССЫЛКИ*/}
                         <button className="bttn">
-                             КУПИТЬ
+                            КУПИТЬ
                         </button>
+                        {/*<Link >*/}
+                        {/*    */}
+                        {/*</Link>*/}
                     </div>
                     <div className='promo_ph'>
                         <img
@@ -19,8 +27,16 @@ class Promo extends Component {
                             width={703.88}
                             className={"d-inline-block "}
                             alt="logo"
-
                         />
+
+                        <Navbar href="/bunny">
+                            <Nav.Link href="/bunny">
+                                <Secret_bttn className="secret_bttn">
+                                    <Game>
+                                    </Game>
+                                </Secret_bttn>
+                            </Nav.Link>
+                        </Navbar>
                     </div>
                     <div className='bttn_promo mycol'>
                         <button className="bttn btn_right">

@@ -1,11 +1,14 @@
 import React from "react";
-import './index.css'
-import './App.css'
+import './CSS/index.css'
+import './CSS/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  {Component} from 'react';
 import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home";
 import FaqQ from "./pages/faqQ";
+import './CSS/index.scss'
+import Game from "./pages/Game";
+
+
 
 
 export default App;
@@ -14,6 +17,7 @@ export function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/faqQ" element={<FaqQ />} />
+            <Route path="/bunny" element={<Game />} />
         </Routes>
     )
 }

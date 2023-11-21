@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 class Accardion extends Component {
     render() {
         return (
-            <Accordion className="accor_main" defaultActiveKey="0" flush>
+            <Accordion className="accor_main" defaultActiveKey="0">
                 <Accordion.Item className="accor_margin" eventKey="0">
                     <Accordion.Header className="accor_item">Question ?</Accordion.Header>
                     <Accordion.Body >
