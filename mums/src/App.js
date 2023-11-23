@@ -5,11 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home";
 import FaqQ from "./pages/faqQ";
-import './CSS/index.scss'
 import Game from "./pages/Game";
-
-
-
 
 export default App;
 export function App() {
