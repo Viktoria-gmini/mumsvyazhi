@@ -9,8 +9,6 @@ import './CSS/index.scss'
 import Game from "./pages/Game";
 
 
-
-
 export default App;
 export function App() {
     return (

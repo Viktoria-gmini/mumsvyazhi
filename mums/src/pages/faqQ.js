@@ -9,9 +9,11 @@ import Header_questions from "../components/Questions/header_questions";
 class FaqQ extends Component {
     render() {
         return (
-            <Container>
-                <Header_questions></Header_questions>
-            </Container>
+            <div className='bg_quest container-fluid'>
+                <Container>
+                    <Header_questions></Header_questions>
+                </Container>
+            </div>
         );
     }
 }

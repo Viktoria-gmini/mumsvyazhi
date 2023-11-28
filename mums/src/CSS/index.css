@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 body {
   margin: 0;
@@ -70,7 +70,7 @@ body {
  fill:none;
 }
 .instagram:hover{
-  fill: rgba(0,0,0, 0.1);
+  fill: rgba(0,0,0, 0.05);
 }
 
 /*______________Promo______________*/
@@ -81,6 +81,7 @@ body {
 .promo_photo{
   height: 800px;
   width: 703.88px;
+
 }
 /*games start*/
 
@@ -99,14 +100,17 @@ body {
 }
 .promo_ph img{
   margin-top: -12%;
+  margin-left: 40px;
 }
 .bttn{
   margin-top: 340px !important;
   height: 91px;
-  width: 330px;
-  font-size: 60px;
+  width: 297px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 50px;
   background: #FBF4ED;
-
+  text-transform: lowercase;
 }
 .bttn:hover{
   background: #F8DCC0;
@@ -120,7 +124,7 @@ body {
   margin: 0 !important;
 }
 .btn_right{
-  margin-left: -85px;
+  margin-left: -62px;
 }
 .secret_bttn{
   cursor: pointer;
@@ -211,14 +215,21 @@ body {
 }
 .card-name{
   font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   padding-top: 1em;
   height: 60px;
 }
 .price{
   font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   padding-bottom: 26px;
 }
 /*______________QUESTIONS_____________*/
+.bg_quest{
+  background-color: #FBF4ED;
+}
 .text_quest{
   display: flex;
   justify-content: center;
@@ -276,14 +287,14 @@ body {
 /*______________Footer_____________*/
 .footer{
   background: #000;
-  height: 910px;
+  height: 1000px;
 }
 .footer_text{
   color:white;
 }
 .footer_flex{
   display: flex;
-  padding-top: 50px;
+  padding-top: 40px;
 
 }
 .footer_flex img{
@@ -300,17 +311,27 @@ body {
 
 }
 .footer_text_cus {
+  display: flex;
+  text-align: start;
   width: 570px;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
   font-size: 159px;
+  font-weight: 400;
+  margin-left: -10px;
 }
 .footer_text_disc{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   font-size: 32px;
   max-width: 740px;
+  padding-bottom: 40px;
 }
 .footer_img{
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 200px;
+
 }
 

@@ -10,7 +10,7 @@ class Footer extends Component {
                     <Container>
                         <div className='footer_flex'>
                             <Col className='footer_text'>
-                                <p className='footer_text_cus'>Кастом</p>
+                                <p className='footer_text_cus'>кастом</p>
                                 <p className='footer_text_disc'>
                                     Не нашли в каталоге то, что хотели ? Заполните форму для создания уникальной вещи,
                                     связанной по вашему описанию и фотографиям.

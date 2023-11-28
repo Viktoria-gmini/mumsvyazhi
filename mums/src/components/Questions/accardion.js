@@ -6,7 +6,7 @@ class Accardion extends Component {
         return (
             <Accordion className="accor_main" defaultActiveKey="0">
                 <Accordion.Item className="accor_margin" eventKey="0">
-                    <Accordion.Header className="accor_item">Question ?</Accordion.Header>
+                    <Accordion.Header className="accor_item">question?</Accordion.Header>
                     <Accordion.Body >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -15,7 +15,7 @@ class Accardion extends Component {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item className="accor_margin" eventKey="1">
-                    <Accordion.Header>Question ?</Accordion.Header>
+                    <Accordion.Header>question?</Accordion.Header>
                     <Accordion.Body>
                         LLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -24,7 +24,7 @@ class Accardion extends Component {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item className="accor_margin" eventKey="2">
-                    <Accordion.Header>Question ?</Accordion.Header>
+                    <Accordion.Header>question?</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -33,7 +33,7 @@ class Accardion extends Component {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item className="accor_margin" eventKey="3">
-                    <Accordion.Header>Question ?</Accordion.Header>
+                    <Accordion.Header>question?</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -42,7 +42,7 @@ class Accardion extends Component {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item className="accor_margin" eventKey="4">
-                    <Accordion.Header>Question ?</Accordion.Header>
+                    <Accordion.Header>question?</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
