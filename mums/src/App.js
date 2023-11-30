@@ -7,6 +7,7 @@ import Home from "./pages/home";
 import FaqQ from "./pages/faqQ";
 import './CSS/index.scss'
 import Game from "./pages/Game";
+import Cart from "./pages/Cart";
 
 
 export default App;
@@ -15,6 +16,7 @@ export function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/faqQ" element={<FaqQ />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/bunny" element={<Game />} />
         </Routes>
     )

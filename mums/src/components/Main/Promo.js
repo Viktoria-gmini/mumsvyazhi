@@ -28,7 +28,6 @@ class Promo extends Component {
                             className={"d-inline-block "}
                             alt="logo"
                         />
-
                         <Navbar href="/bunny">
                             <Nav.Link href="/bunny">
                                 <Secret_bttn className="secret_bttn">

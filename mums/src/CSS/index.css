@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -36,6 +37,7 @@ body {
 /*______________Header______________*/
 .header_menu{
   width: 1280px !important;
+  z-index: 1;
 }
 /*_____CART SVG_____*/
 .cart{
@@ -220,12 +222,7 @@ body {
   padding-top: 1em;
   height: 60px;
 }
-.price{
-  font-size: 32px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  padding-bottom: 26px;
-}
+
 /*______________QUESTIONS_____________*/
 .bg_quest{
   background-color: #FBF4ED;
@@ -283,6 +280,194 @@ body {
 }
 .bug{
   margin-bottom: -100px;
+}
+/*______________Cart_____________*/
+.scrollable-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.header_cart{
+  position: absolute;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 130px;
+  min-height: 600px;
+  padding-bottom: 50px;
+  margin-left: 100px;
+}
+.card-cart{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 480px;
+  height: 162px;
+  margin-bottom: 30px;
+}
+.card-cart:last-child{
+  margin-bottom: 0;
+}
+.duble-block{
+  display: flex;
+  flex-direction: row;
+  padding: 0 !important;
+}
+.cart-main{
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+}
+.product-list-cart{
+  background-color: #F7E9DB;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  max-height: 750px;
+}
+.price-cart{
+  background-image: url("../img/bg_price.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
+}
+.img-product-cart{
+  height: 162px;
+  width: 162px;
+  border: 1px solid black;
+}
+.name-product-cart{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 162px;
+  width: 162px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.button-product-cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 162px;
+  width: 162px;
+}
+.delite_icon{
+  cursor: pointer;
+  fill: #FBF4ED;
+  height: 74px;
+  width: 74px;
+}
+.delite_icon:hover{
+  fill: #F7E9DB;
+}
+.delite_icon:active{
+  fill: #F4DCC5;
+}
+.eye_icon{
+  cursor: pointer;
+  width: 86px;
+}
+.circle{
+  fill: #FBF4ED;
+}
+.circle:hover{
+  fill: #F7E9DB;
+}
+.circle:active{
+  fill: #F4DCC5;
+}
+.eyes_deffect{
+  fill: #FBF4ED;
+}
+.messanger{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 304px;
+  height: 306px;
+  border: 2px solid black;
+  background-color: #F6E4D3;
+  margin-bottom: 20px;
+}
+.price-block-img{
+  position: fixed;
+  margin-bottom: -630px;
+}
+.price-cart{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 130px;
+  min-height: 600px;
+  max-height: 800px;
+}
+.price_flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.messanger{
+  margin-bottom: 10px;
+}
+.messanger_text{
+  font-family: 'Montserrat';
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 39px;
+  text-align: left;
+  padding: 5px;
+}
+.messanger_input{
+  border: 2px solid black;
+  height: 46px;
+  width: 289px;
+}
+.animated {
+  transform: translateY(50%);
+  transition: transform 1s linear;
+}
+.bttn_zakaz{
+  position: fixed;
+  width: 245px;
+  height: 48px;
+  margin-top: 200px;
+  margin-left: -275px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 39px;
+}
+.sum_text{
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 44px;
+  text-align: center;
+  margin-top: -250px;
+  margin-left: 20px;
+  width: 270px;
+  height: 44px;
+}
+.animated:hover {
+  transform: translateY(0);
+}
+.hidden_block{
+  width: 740px;
+  height: 120px;
+  background-color: #F7E9DB;
+  position: fixed;
+  z-index: 0;
 }
 /*______________Footer_____________*/
 .footer{
