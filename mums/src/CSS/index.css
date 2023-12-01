@@ -25,6 +25,7 @@ body {
   background: #F7E9DB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 .background{
   background: #F7E9DB;
@@ -35,6 +36,12 @@ body {
   --bs-gutter-x: 0rem !important;
 }
 /*______________Header______________*/
+.menu_flex{
+  display: flex;
+  background-color: darkred;
+  max-width: 1280px;
+  width: 100%;
+}
 .header_menu{
   width: 1280px !important;
   z-index: 1;
@@ -148,7 +155,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: -100px;
-
 }
 .froggy{
   display: flex;
@@ -192,7 +198,6 @@ body {
   max-width: 1280px;
   width: 100%;
   padding-bottom: 80px;
-
 }
 .card-img{
   height: 353px;
@@ -226,6 +231,7 @@ body {
 /*______________QUESTIONS_____________*/
 .bg_quest{
   background-color: #FBF4ED;
+
 }
 .text_quest{
   display: flex;
@@ -267,10 +273,10 @@ body {
 .quest_flex{
   display: flex;
   flex-direction: row;
-  max-height: 100%;
-  height: 600px;
-  max-width: 100%;
-  width: 1262px;
+  max-height: 815px;
+  height: 100%;
+  max-width: 1262px;
+  width: 100%;
 }
 .bug_wrap{
   display: flex;
@@ -289,9 +295,10 @@ body {
 }
 .header_cart{
   position: absolute;
+  align-items: center;
   height: 125px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .flex-cart{
@@ -299,9 +306,13 @@ body {
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  margin-top: 130px;
-  min-height: 600px;
+  max-height: 750px;
+  height: 100%;
   padding-bottom: 50px;
+
+}
+.cards_card{
+  margin-top: 130px;
   margin-left: 100px;
 }
 .card-cart{
@@ -319,23 +330,30 @@ body {
   display: flex;
   flex-direction: row;
   padding: 0 !important;
+  max-height: 750px;
+  height: 100%;
 }
 .cart-main{
   display: flex;
   flex-direction: column;
   padding: 0 !important;
+  height: 750px;
 }
 .product-list-cart{
   background-color: #F7E9DB;
   overflow-y: scroll;
   scroll-behavior: smooth;
   max-height: 750px;
+  height: 100%;
 }
 .price-cart{
   background-image: url("../img/bg_price.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 750px;
+  align-items: flex-start;
+  justify-content: center;
+  max-height: 750px;
+  height: 100%;
 }
 .img-product-cart{
   height: 162px;
@@ -387,6 +405,12 @@ body {
 .eyes_deffect{
   fill: #FBF4ED;
 }
+.mess_price_block{
+  display: flex;
+  justify-content: center;
+  height: 612px;
+  width: 400px;
+}
 .messanger{
   display: flex;
   justify-content: center;
@@ -400,15 +424,7 @@ body {
 }
 .price-block-img{
   position: fixed;
-  margin-bottom: -630px;
-}
-.price-cart{
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 130px;
-  min-height: 600px;
-  max-height: 800px;
+  margin-top: 320px;
 }
 .price_flex{
   display: flex;
@@ -420,7 +436,7 @@ body {
   margin-bottom: 10px;
 }
 .messanger_text{
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 32px;
   font-weight: 300;
   line-height: 39px;
@@ -428,7 +444,7 @@ body {
   padding: 5px;
 }
 .messanger_input{
-  border: 2px solid black;
+  border: 1.5px solid black;
   height: 46px;
   width: 289px;
 }
@@ -463,11 +479,23 @@ body {
   transform: translateY(0);
 }
 .hidden_block{
-  width: 740px;
-  height: 120px;
+  display: flex;
+  flex-direction: row;
+  max-width: 580px;;
+  width: 100%;
   background-color: #F7E9DB;
-  position: fixed;
   z-index: 0;
+  padding: 0;
+}
+.hidden_block2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 640px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  padding-right: 50px;
 }
 /*______________Footer_____________*/
 .footer{

@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home";
 import FaqQ from "./pages/faqQ";
 import './CSS/index.scss'
+import './CSS/mobile.css'
 import Game from "./pages/Game";
 import Cart from "./pages/Cart";
 
