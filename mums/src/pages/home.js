@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import CaruselBox from "../components/Main/CaruselBox";
 import '../CSS/index.css';
 import Header from "../components/Main/header";
 import Promo from "../components/Main/Promo";

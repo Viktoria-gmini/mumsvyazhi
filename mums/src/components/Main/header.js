@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, Container} from "react-bootstrap";
-import {ReactComponent as Logo} from "../../img/logo.svg";
-import {ReactComponent as Telegram}  from '../../img/telegram.svg';
-import {ReactComponent as Instagram}  from '../../img/insta.svg';
-import {ReactComponent as Faq}  from '../../img/faq.svg';
-import {ReactComponent as Cart} from '../../img/cart.svg';
+import {ReactComponent as Logo} from "../../img/header/logo.svg";
+import {ReactComponent as Telegram}  from '../../img/header/telegram.svg';
+import {ReactComponent as Instagram}  from '../../img/header/insta.svg';
+import {ReactComponent as Faq}  from '../../img/header/faq.svg';
+import {ReactComponent as Cart} from '../../img/header/cart.svg';
 
 // EБТВОЮМАТЬ Я ЛЮБЛЮ ТВОИ ВОЛОСЫ Я ХОЧУ СПАТЬ С ТОБОЙ Я ХОЧУ СТАТЬ ТОБОЙ
 

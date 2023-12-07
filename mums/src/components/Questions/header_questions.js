@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 import Accardion_quest from "./accardion";
-import {ReactComponent as Cart} from "../../img/cart.svg";
-import Bug from "../../img/Bug.png"
-import {ReactComponent as Logo} from "../../img/logo.svg";
-import {ReactComponent as Telegram}  from '../../img/telegram.svg';
-import {ReactComponent as Instagram}  from '../../img/insta.svg';
+import {ReactComponent as Cart} from "../../img/header/cart.svg";
+import Bug from "../../img/faq/Bug.png"
+import {ReactComponent as Logo} from "../../img/header/logo.svg";
+import {ReactComponent as Telegram}  from '../../img/header/telegram.svg';
+import {ReactComponent as Instagram}  from '../../img/header/insta.svg';
 
 class HeaderQuestions extends Component {
     render() {

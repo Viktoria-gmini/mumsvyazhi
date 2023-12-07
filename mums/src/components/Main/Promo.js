@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import promo_photo from '../../img/promo_photo.svg';
+import promo_photo from '../../img/main/promo_photo.svg';
 import {Container, Nav, Navbar} from "react-bootstrap";
 import Game from "../../pages/Game.js";
 import {ReactComponent as Secret_bttn}  from '../../img/secret_bttn.svg';

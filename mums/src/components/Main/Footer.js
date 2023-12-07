@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Container} from "react-bootstrap";
-import CaruselBox from "./CaruselBox";
-import footer_img from '../../img/footer_img.png';
+import ImageUploader from "./../Main/ImageUploader";
+import footer_img from '../../img/footer/footer_img.png';
 class Footer extends Component {
     render() {
         return (
@@ -15,7 +15,7 @@ class Footer extends Component {
                                     Не нашли в каталоге то, что хотели ? Заполните форму для создания уникальной вещи,
                                     связанной по вашему описанию и фотографиям.
                                 </p>
-                                <CaruselBox className='carusel_flex'></CaruselBox>
+                                <ImageUploader className='carusel_flex'></ImageUploader>
                             </Col>
                             <Col className="footer_img">
                                 <img
@@ -24,8 +24,8 @@ class Footer extends Component {
                                 width={486}
                                 className={"d-inline-block align-center justify-content-end"}
                                 alt="logo"
-                            /></Col>
-
+                            />
+                            </Col>
                         </div>
                     </Container>
                 </div>
