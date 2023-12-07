@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {Button, Col, Container, Nav, Navbar} from "react-bootstrap";
-import {ReactComponent as Logo} from "../img/logo.svg";
-import {ReactComponent as Telegram}  from '../img/telegram.svg';
-import {ReactComponent as Instagram}  from '../img/insta.svg';
-import {ReactComponent as Faq}  from '../img/faq.svg';
-import {ReactComponent as Eye}  from '../img/eye _icon.svg';
-import {ReactComponent as Delete}  from '../img/delete.svg';
-import {ReactComponent as Price}  from '../img/price.svg';
+import {ReactComponent as Logo} from "../img/header/logo.svg";
+import {ReactComponent as Telegram}  from '../img/header/telegram.svg';
+import {ReactComponent as Instagram}  from '../img/header/insta.svg';
+import {ReactComponent as Faq}  from '../img/header/faq.svg';
+import {ReactComponent as Eye}  from '../img/cart/eye _icon.svg';
+import {ReactComponent as Delete}  from '../img/cart/delete.svg';
+import {ReactComponent as Price}  from '../img/cart/price.svg';
 
 ;
 class Cart extends Component {
