@@ -7,7 +7,7 @@ class Footer extends Component {
         return (
             <>
                 <div className='footer'>
-                    <Container>
+                    <Container className="header_cart">
                         <div className='footer_flex'>
                             <Col className='footer_text'>
                                 <p className='footer_text_cus'>кастом</p>

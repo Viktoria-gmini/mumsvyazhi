@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
+*{
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: unset;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,20 +13,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
-
+.root{
+  height: 100vh;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-*{
-  font-family: 'Montserrat', sans-serif;
-  box-sizing: unset;
-}
+
 .loader{
-  background: rgb(227,177,254);
-  background: linear-gradient(65deg, rgba(227,177,254,1) 0%, rgba(250,207,146,1) 100%);
+  background: rgb(251,244,237);
+  background: linear-gradient(65deg, rgba(251,244,237,1) 0%, rgba(244,220,197,1) 100%);
   width: 330px;
   height: 460px;
 }
@@ -30,10 +38,10 @@ body {
   background: #F7E9DB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  height: 100vh;
 }
 .background{
-  background: #F7E9DB;
+  background-color: #F7E9DB;
 }
 .container{
   max-width: 1280px !important;
@@ -48,6 +56,7 @@ body {
   width: 100%;
 }
 .header_menu{
+  position: absolute !important;
   width: 1280px !important;
   z-index: 1;
 }
@@ -90,12 +99,11 @@ body {
 /*______________Promo______________*/
 .promo{
   width: 1280px !important;
-  height: 734px;
+  height: 855px;
 }
-.promo_photo{
-  height: 800px;
-  width: 703.88px;
-
+.promo_ph{
+  width: 692px;
+  margin-top: 3%;
 }
 /*games start*/
 
@@ -113,11 +121,11 @@ body {
   padding-right:0;
 }
 .promo_ph img{
-  margin-top: -12%;
+
   margin-left: 40px;
 }
 .bttn{
-  margin-top: 340px !important;
+  margin-top: 450px;
   height: 91px;
   width: 297px;
   font-family: 'Montserrat', sans-serif;
@@ -136,9 +144,6 @@ body {
   align-items: center;
   width: 330px;
   margin: 0 !important;
-}
-.btn_right{
-  margin-left: -62px;
 }
 .secret_bttn{
   cursor: pointer;
@@ -160,6 +165,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: -100px;
+  border: 1.5px solid black;
 }
 .froggy{
   display: flex;
@@ -236,7 +242,11 @@ body {
 /*______________QUESTIONS_____________*/
 .bg_quest{
   background-color: #FBF4ED;
-
+  height: 815px;
+  overflow: hidden;
+}
+.quest-margin{
+  padding-top: 150px;
 }
 .text_quest{
   display: flex;
@@ -263,7 +273,10 @@ body {
   height: 46px;
 }
 .accor_margin{
-  margin-bottom: 46px;
+  margin-bottom: 20px;
+}
+.accor_margin:first-child{
+  margin-bottom: 40px;
 }
 .bug_photo{
   display: flex;
@@ -298,27 +311,22 @@ body {
   display: flex;
   justify-content: center;
 }
-.header_cart{
-  position: absolute;
-  align-items: center;
-  height: 125px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
 .flex-cart{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   flex-shrink: 0;
-  max-height: 750px;
-  height: 100%;
-  padding-bottom: 50px;
-
+  height: 960px;
+  padding-bottom: 40px;
+  scroll-behavior: smooth;
 }
 .cards_card{
   margin-top: 130px;
-  margin-left: 100px;
+  height: 650px;
+  padding-right: 80px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .card-cart{
   display: flex;
@@ -327,36 +335,34 @@ body {
   width: 480px;
   height: 162px;
   margin-bottom: 30px;
+
+
 }
 .card-cart:last-child{
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 .duble-block{
   display: flex;
-  flex-direction: row;
   padding: 0 !important;
-  max-height: 750px;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 .cart-main{
   display: flex;
   flex-direction: column;
   padding: 0 !important;
-  height: 750px;
+  height: 100vh;
+  overflow: hidden;
 }
 .product-list-cart{
   background-color: #F7E9DB;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  max-height: 750px;
-  height: 100%;
 }
 .price-cart{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 750px;
-  height: 100%;
+  flex-direction: column;
+  background-image: url("../img/cart/items_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .img-product-cart{
   height: 162px;
@@ -411,8 +417,11 @@ body {
 .mess_price_block{
   display: flex;
   justify-content: center;
+  margin-top: 130px;
   height: 612px;
   width: 400px;
+  overflow-y: hidden;
+
 }
 .messanger{
   display: flex;
@@ -425,15 +434,21 @@ body {
   background-color: #F6E4D3;
   margin-bottom: 20px;
 }
+.price{
+  overflow-y: hidden;
+}
 .price-block-img{
   position: fixed;
-  margin-top: 320px;
+  margin-top: 350px;
+  height: 250px;
 }
 .price_flex{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 720px;
+  overflow-y: hidden;
 }
 .messanger{
   margin-bottom: 10px;
@@ -454,6 +469,7 @@ body {
 .animated {
   transform: translateY(50%);
   transition: transform 1s linear;
+
 }
 .bttn_zakaz{
   position: fixed;
@@ -503,7 +519,7 @@ body {
 /*______________Footer_____________*/
 .footer{
   background: #000;
-  height: 1050px;
+  height: 1040px;
 }
 .footer_text{
   color:white;
@@ -511,7 +527,6 @@ body {
 .footer_flex{
   display: flex;
   padding-top: 20px;
-
 }
 .footer_flex img{
   position: absolute;
@@ -664,4 +679,15 @@ input[type="file"]{
   width: 84px;
   height: 84px !important;
   margin-top: 250px;
+}
+/*_____________ReactModal____________*/
+.ReactModal__Overlay{
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+.ReactModal__Content{
+  width: 679px!important;
+  height: 730px!important;
+  border: 1.5px solid black !important
 }
