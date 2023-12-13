@@ -23,7 +23,7 @@ const Main = () =>{
             }
         return (
            <>
-               <div className='main_osn'>
+               <div className='main_osn' id='section'>
                    <div className="card_wrap">
                        <Products products = {prodList} />
                    </div>

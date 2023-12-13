@@ -5,6 +5,7 @@ import Game from "../../pages/Game.js";
 import {ReactComponent as Secret_bttn}  from '../../img/secret_bttn.svg';
 
 
+
 class Promo extends Component {
     render() {
         return (
@@ -13,12 +14,11 @@ class Promo extends Component {
                     <div className='bttn_promo mycol'>
 
                         {/*ДОДЕЛАТЬ ЯКОРНЫЕ ССЫЛКИ*/}
-                        <button className="bttn">
-                            КУПИТЬ
-                        </button>
-                        {/*<Link >*/}
-                        {/*    */}
-                        {/*</Link>*/}
+                        <a href="#section">
+                            <button className="bttn">
+                                КУПИТЬ
+                            </button>
+                        </a>
                     </div>
                     <div className='promo_ph'>
                         <img
@@ -38,12 +38,15 @@ class Promo extends Component {
                         </Navbar>
                     </div>
                     <div className='bttn_promo mycol'>
-                        <button className="bttn btn_right">
-                            КАСТОМ
-                        </button>
+                        <a href="#section1">
+                            <button className="bttn btn_right">
+                                КАСТОМ
+                            </button>
+                        </a>
                     </div>
                 </div>
             </Container>
+
         );
     }
 }
