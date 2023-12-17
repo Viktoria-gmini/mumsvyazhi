@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Container} from "react-bootstrap";
-import Header_questions from "../components/Questions/header_questions";
+import Header_questions from "./Questions/header_questions";
 
 
 class FaqQ extends Component {

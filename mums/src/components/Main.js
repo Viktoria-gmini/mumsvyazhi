@@ -1,7 +1,7 @@
 import {ProductService} from "../services/ProductService.js"
 import { useState } from "react";
 import { useEffect } from "react";
-import {Products} from "../components/Main/products";
+import {Products} from "./products";
 
 
 const Main = () =>{
@@ -23,7 +23,7 @@ const Main = () =>{
             }
         return (
            <>
-               <div className='main_osn' id='section'>
+               <div className='main_osn' id='goods'>
                    <div className="card_wrap">
                        <Products products = {prodList} />
                    </div>

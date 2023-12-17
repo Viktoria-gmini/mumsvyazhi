@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {Col, Container} from "react-bootstrap";
-import ImageUploader from "./../Main/ImageUploader";
-import footer_img from '../../img/footer/footer_img.png';
+import ImageUploader from "./ImageUploader";
+import footer_img from '../img/footer/footer_img.png';
+import '../CSS/index.css'
+
 class Footer extends Component {
     render() {
         return (
             <>
-                <div className='footer' id='section1'>
+                <div className='footer' id='castom'>
                     <Container className="header_cart">
                         <div className='footer_flex'>
                             <Col className='footer_text'>

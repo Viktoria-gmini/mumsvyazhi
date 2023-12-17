@@ -6,7 +6,7 @@ import Bug from "../../img/faq/Bug.png"
 import {ReactComponent as Logo} from "../../img/header/logo.svg";
 import {ReactComponent as Telegram}  from '../../img/header/telegram.svg';
 import {ReactComponent as Instagram}  from '../../img/header/insta.svg';
-import Header from "../Main/header";
+import Header from "../header";
 
 class HeaderQuestions extends Component {
     render() {

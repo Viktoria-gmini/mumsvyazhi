@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import promo_photo from '../../img/main/promo_photo.svg';
+import promo_photo from '../img/main/promo_photo.svg';
 import {Container, Nav, Navbar} from "react-bootstrap";
-import Game from "../../pages/Game.js";
-import {ReactComponent as Secret_bttn}  from '../../img/secret_bttn.svg';
+import Game from "./Game.js";
+import {ReactComponent as Secret_bttn}  from '../img/secret_bttn.svg';
 
 
 
@@ -14,7 +14,7 @@ class Promo extends Component {
                     <div className='bttn_promo mycol'>
 
                         {/*ДОДЕЛАТЬ ЯКОРНЫЕ ССЫЛКИ*/}
-                        <a href="#section">
+                        <a href="#goods">
                             <button className="bttn">
                                 КУПИТЬ
                             </button>
@@ -38,7 +38,7 @@ class Promo extends Component {
                         </Navbar>
                     </div>
                     <div className='bttn_promo mycol'>
-                        <a href="#section1">
+                        <a href="#castom">
                             <button className="bttn btn_right">
                                 КАСТОМ
                             </button>

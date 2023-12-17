@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Secret from '../components/Secret';
+import Secret from './Secret';
 
 class Game extends Component {
     render() {

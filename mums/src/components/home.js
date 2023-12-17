@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import '../CSS/index.css';
-import Header from "../components/Main/header";
-import Promo from "../components/Main/Promo";
+import Header from "./header";
+import Promo from "./Promo";
 import Main from "./Main";
-import Footer from "../components/Main/Footer";
+import Footer from "./Footer";
 export default class Home extends Component {
     render() {
         return (

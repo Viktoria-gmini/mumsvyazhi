@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, Container} from "react-bootstrap";
-import {ReactComponent as Logo} from "../../img/header/logo.svg";
-import {ReactComponent as Telegram}  from '../../img/header/telegram.svg';
-import {ReactComponent as Instagram}  from '../../img/header/insta.svg';
-import {ReactComponent as Faq}  from '../../img/header/faq.svg';
-import {ReactComponent as Cart} from '../../img/header/cart.svg';
+import {ReactComponent as Logo} from "../img/header/logo.svg";
+import {ReactComponent as Telegram}  from '../img/header/telegram.svg';
+import {ReactComponent as Instagram}  from '../img/header/insta.svg';
+import {ReactComponent as Faq}  from '../img/header/faq.svg';
+import {ReactComponent as Cart} from '../img/header/cart.svg';
 
 // EБТВОЮМАТЬ Я ЛЮБЛЮ ТВОИ ВОЛОСЫ Я ХОЧУ СПАТЬ С ТОБОЙ Я ХОЧУ СТАТЬ ТОБОЙ
 
@@ -13,10 +13,10 @@ export default class Header extends Component {
 
         return (
             <Container>
-                <Navbar className="header_menu justify-content-around" collapseOnSelect expand="md">
+                <Navbar className="header_menu justify-content-around " collapseOnSelect expand="md">
                     <Container>
                         <Navbar.Brand href="/">
-                            <Logo  className="d-inline-block align-top" height='117' width='156'></Logo>
+                            <Logo  className="d-inline-block align-top logo" height='117' width='156'></Logo>
                         </Navbar.Brand>
                         <Navbar href="/cart">
                             <Nav.Link href="/cart">

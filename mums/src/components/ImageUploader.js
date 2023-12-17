@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Done from '../../img/footer/done.svg';
+import Done from '../img/footer/done.svg';
 
 // ДОДЕЛАТЬ (ПОКА ОТЛОЖЕНО)
 
@@ -19,12 +19,12 @@ const ImageUploader = () => {
         return (
             <div className="carousel">
                 <Swiper
+                    id="swiper1"
                     pagination={{
                     type: 'progressbar',
                     }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
-                    className="mySwiper"
                 >
                     <SwiperSlide>
                         <div className="slider_flex">

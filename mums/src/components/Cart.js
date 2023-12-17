@@ -3,7 +3,7 @@ import {Button, Col, Container, Nav, Navbar} from "react-bootstrap";
 import {ReactComponent as Eye}  from '../img/cart/eye _icon.svg';
 import {ReactComponent as Delete}  from '../img/cart/delete.svg';
 import {ReactComponent as Price}  from '../img/cart/price.svg';
-import Header from "../components/Main/header";
+import Header from "./header";
 import 'animate.css';
 class Cart extends Component {
 
