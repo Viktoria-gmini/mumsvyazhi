@@ -3,12 +3,11 @@ import './CSS/index.css'
 import './CSS/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from "react-router-dom"
-import Home from "./pages/home";
-import FaqQ from "./pages/faqQ";
+import Home from "./components/home";
+import FaqQ from "./components/faqQ";
 import './CSS/index.scss'
-import './CSS/mobile.css'
-import Game from "./pages/Game";
-import Cart from "./pages/Cart";
+import Game from "./components/Game";
+import Cart from "./components/Cart";
 
 
 export default App;
