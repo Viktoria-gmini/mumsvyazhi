@@ -46,7 +46,7 @@ public class ProductService {
         productRepository.save(product);
     }
 
-    private Image toImageEntity(MultipartFile file) throws IOException {
+private Image toImageEntity(MultipartFile file) throws IOException {
         Image image = new Image();
         image.setName(file.getName());
         image.setOriginalFileName(file.getOriginalFilename());

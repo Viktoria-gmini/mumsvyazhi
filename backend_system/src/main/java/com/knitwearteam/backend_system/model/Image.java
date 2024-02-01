@@ -36,4 +36,12 @@ public class Image {
     @JsonIgnore
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     private Product product;
+    @ToString.Exclude
+    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    private BespokenCustom bespokenCustom;
+
+    private String url;
+
+
 }

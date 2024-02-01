@@ -28,5 +28,10 @@
     Третья фотография: <input type="file" name="file3"/><br><br>
     <input type="submit" value="Добавить товар"/>
 </form>
+
+
+<div>
+<a href="/customer/">Создать заказчика...</a><
+</div>
 </body>
 </html>
