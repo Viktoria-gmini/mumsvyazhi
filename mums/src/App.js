@@ -4,9 +4,9 @@ import './CSS/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from "react-router-dom"
 import Home from "./components/home";
-import FaqQ from "./components/faqQ";
+import FaqQ from "./components/Questions/faqQ";
 import './CSS/index.scss'
-import Game from "./components/Game";
+import Game from "./components/Game/Game";
 import Cart from "./components/Cart";
 
 

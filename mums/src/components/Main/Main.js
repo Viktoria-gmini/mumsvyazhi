@@ -1,4 +1,4 @@
-import {ProductService} from "../services/ProductService.js"
+import {ProductService} from "../../services/ProductService.js"
 import { useState } from "react";
 import { useEffect } from "react";
 import {Products} from "./products";
