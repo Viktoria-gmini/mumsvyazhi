@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Col, Container} from "react-bootstrap";
-import ImageUploader from "./ImageUploader";
-import footer_img from '../img/footer/footer_img.png';
-import '../CSS/index.css'
+import ImageUploader from "../ImageUploader";
+import footer_img from '../../img/footer/footer_img.png';
+import '../../CSS/index.css'
 
 class Footer extends Component {
     render() {
