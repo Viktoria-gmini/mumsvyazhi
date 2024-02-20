@@ -7,7 +7,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-// import Preloader from "./Preloader";
+import Lottie from 'lottie-react-web';
+import animationData from './Animation - 1702822230496.json';
 import {ReactComponent as Cart} from '../img/header/cart.svg';
 
 
@@ -102,11 +103,19 @@ function Card(props) {
             <nav className="product justify-content-center text-center">
                 {state === 'loading' ? (
                         // ????????????????????????????
-                        <div className="loader"></div>
-                   // <Preloader/>
+                        <div className="loader">
+                            <Lottie
+                                options={{
+                                    animationData: animationData,
+                                    loop: true,
+                                }}
+                                width={330}
+                                height={460}
+                            />
+                        </div>
                 ) : (
 
-                    <div className="card loader" onClick={handleCardClick}>
+                    <div className="card" onClick={handleCardClick}>
                         <div className="card-img">
                             <img className= "img" src={Base64[0]} crossOrigin="anonymous" alt={"product"}/>
                         </div>
