@@ -799,23 +799,3 @@ code {
   height: 83px;
 }
 /*_____________________________________бегущая строка текста в карточке товара_______________________________________*/
-.marquee-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.marquee-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 10s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
