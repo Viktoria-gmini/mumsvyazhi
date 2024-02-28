@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from "react";
-import {ProductService} from "../services/ProductService";
+import {ProductService} from "../../services/ProductService";
 import Modal from 'react-modal';
-import '../CSS/index.css'
-import {ReactComponent as Close} from '../img/modal/close_bttn.svg';
+import '../../CSS/index.css'
+import {ReactComponent as Close} from '../../img/modal/close_bttn.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import Lottie from 'lottie-react-web';
-import animationData from './Animation - 1702822230496.json';
-import {ReactComponent as Cart} from '../img/header/cart.svg';
+import animationData from '../loader.json';
+import {ReactComponent as Cart} from '../../img/header/cart.svg';
 
 
 function Card(props) {
@@ -64,6 +64,7 @@ function Card(props) {
                 </div>
             </div>
         );
+
     function handleCardClick() {
         setState('cardIsPressed');
         setModalIsOpen(true);
@@ -96,65 +97,66 @@ function Card(props) {
                       });
                 }
 
-                        }
+    }
 
     return (
+        <nav className="product justify-content-center text-center">
+            {state === 'loading' ? (
+                // ????????????????????????????
+                <div className="loader">
+                    <Lottie
+                        options={{
+                            animationData: animationData,
+                            loop: true,
+                        }}
+                        width={330}
+                        height={460}
+                    />
+                </div>
+            ) : (
 
-            <nav className="product justify-content-center text-center">
-                {state === 'loading' ? (
-                        // ????????????????????????????
-                        <div className="loader">
-                            <Lottie
-                                options={{
-                                    animationData: animationData,
-                                    loop: true,
-                                }}
-                                width={330}
-                                height={460}
-                            />
-                        </div>
-                ) : (
-
-                    <div className="card" onClick={handleCardClick}>
-                        <div className="card-img">
-                            <img className= "img" src={Base64[0]} crossOrigin="anonymous" alt={"product"}/>
-                        </div>
-                        <div className="card-text" >
-                            <p className="card-name">{props.product.title}</p>
-                            <p className="price">{props.product.price} рублей</p>
-                        </div>
+                <div className="card" onClick={handleCardClick}>
+                    <div className="card-img">
+                        <img className="img" src={Base64[0]} crossOrigin="anonymous" alt={"product"}/>
                     </div>
-                )}
-                {state === 'cardIsPressed' && (
-                      <div className="modal_flex">
-                          <Modal isOpen={modalIsOpen}
-                                 onRequestClose={closeModal}
-                                 style={{
-                                    overlay: {
-                                        position: 'fixed',
-                                        top: 0,
-                                              right: 0,
-                                        bottom: 0,
-                                        opacity: 1,
-                                    },
+                    <div className="card-text">
+                        <p className="card-name">{props.product.title}</p>
+                        <p className="price">{props.product.price} рублей</p>
+                    </div>
+                </div>
+            )}
+            {state === 'cardIsPressed' && (
+                <div className="modal_flex">
+                    <Modal isOpen={modalIsOpen}
+                           onRequestClose={closeModal}
+                           style={{
+                               overlay: {
+                                   position: 'fixed',
+                                   top: 0,
+                                   right: 0,
+                                   bottom: 0,
+                                   opacity: 1,
+                               },
 
-                                    content: {
-                                        position: 'absolute',
-                                        top: '200px',
-                                        left: '-50%',
-                                        right: '-50%',
-                                        bottom: '200px',
-                                              WebkitOverflowScrolling: 'touch',
-                                        borderRadius: '0',
-                                        outline: 'none',
-                                        padding: '20px'
-                                    }}
-                                 }>
-                              {modalContent}
-                          </Modal>
-                      </div>
-                  )}
-                </nav>
+                               content: {
+                                   position: 'absolute',
+                                   top: '200px',
+                                   left: '-50%',
+                                   right: '-50%',
+                                   bottom: '200px',
+                                   WebkitOverflowScrolling: 'touch',
+                                   borderRadius: '0',
+                                   outline: 'none',
+                                   padding: '20px'
+                               }
+                            }
+                           }>
+                        {modalContent}
+                    </Modal>
+                </div>
+            )}
+        </nav>
     );
 }
+
 export default Card;

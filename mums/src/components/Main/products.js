@@ -19,6 +19,6 @@ export class Products extends Component{
                 </main>
 
         )
-}
+    }
 }
 export default Products;
