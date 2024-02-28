@@ -22,7 +22,6 @@ function Card(props) {
 
     };
         const modalContent = (
-
             <div className="modal_window">
                 <div className="modal_card">
                     <div className="bttn_block_close">
