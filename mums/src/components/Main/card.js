@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from "react";
-import {ProductService} from "../services/ProductService";
+import {ProductService} from "../../services/ProductService";
 import Modal from 'react-modal';
-import '../CSS/index.css'
-import {ReactComponent as Close} from '../img/modal/close_bttn.svg';
+import '../../CSS/index.css'
+import {ReactComponent as Close} from '../../img/modal/close_bttn.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import Lottie from 'lottie-react-web';
-import animationData from './Animation - 1702822230496.json';
-import {ReactComponent as Cart} from '../img/header/cart.svg';
+import animationData from '../Animation - 1702822230496.json';
+import {ReactComponent as Cart} from '../../img/header/cart.svg';
 
 
 function Card(props) {
