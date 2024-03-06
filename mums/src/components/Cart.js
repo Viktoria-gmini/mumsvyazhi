@@ -1,14 +1,20 @@
-import React, {Component, useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import {Button, Col, Container, Nav, Navbar} from "react-bootstrap";
 import {ReactComponent as Eye}  from '../img/cart/eye _icon.svg';
 import {ReactComponent as Delete}  from '../img/cart/delete.svg';
 import {ReactComponent as Price}  from '../img/cart/price.svg';
 import Header from "./Main/header";
 
+import { addToCart } from '../components/Main/card'; //
 
-function Cart (props){
-    const [Base64, setBase64] = useState([]);
-    const [state, setState] = useState('');
+const Cart = (props) => {
+    useEffect(() => {
+        // Ваш код эффекта
+    }, [props.init]);
+    const handleAddToCart = (product) => {
+        addToCart(product); // Вызов функции addToCart из импортированного модуля
+    }
+
     return (
         <div className='cart-main'>
             <Header></Header>
@@ -18,19 +24,18 @@ function Cart (props){
                         <div className="cards_card">
                             <div className='card-cart'>
                                 <div className="img-product-cart">
-                                    <img className="img" src={Base64[0]} crossOrigin="anonymous" alt={"product"}/>
+                                    {/*<img className="img" src={Base64[0]} crossOrigin="anonymous" alt={"product"}/>*/}
                                 </div>
                                 <div className="name-product-cart">
                                     <p className="card-name">{props.product.title}</p>
                                     <p className="price">{props.product.price} рублей</p>
                                 </div>
                                 <div className="button-product-cart">
-                                    <Delete className="delite_icon" ></Delete>
+                                    <Delete onClick={() => props.removeItem(props.product)} className="delite_icon" ></Delete>
                                     <Eye className="eye_icon"></Eye>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </Col>
                 <Col className="price-cart xs={6}>xs=6">
