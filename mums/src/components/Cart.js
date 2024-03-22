@@ -5,16 +5,18 @@ import {ReactComponent as Delete}  from '../img/cart/delete.svg';
 import {ReactComponent as Price}  from '../img/cart/price.svg';
 import Header from "./Main/header";
 
-import { addToCart } from '../components/Main/card'; //
 
-const Cart = (props) => {
-    useEffect(() => {
-        // Ваш код эффекта
-    }, [props.init]);
-    const handleAddToCart = (product) => {
-        addToCart(product); // Вызов функции addToCart из импортированного модуля
-    }
+const Cart = (props, Base64) => {
+    const { product, removeFromCart } = props;
+    const [phoneInput, setPhoneInput] = useState('');
 
+    const handleAddToCart = () => {
+        props.addToCart(product);
+    };
+
+    const handlePhoneInputChange = (event) => {
+        setPhoneInput(event.target.value);
+    };
     return (
         <div className='cart-main'>
             <Header></Header>
@@ -24,14 +26,14 @@ const Cart = (props) => {
                         <div className="cards_card">
                             <div className='card-cart'>
                                 <div className="img-product-cart">
-                                    {/*<img className="img" src={Base64[0]} crossOrigin="anonymous" alt={"product"}/>*/}
+                                    <img className="img" src={Base64[0]} crossOrigin="anonymous" alt={"product"}/>
                                 </div>
                                 <div className="name-product-cart">
-                                    <p className="card-name">{props.product.title}</p>
-                                    <p className="price">{props.product.price} рублей</p>
+                                    <p className="card-name">{props.product && props.product.title}</p>
+                                    <p className="price">{props.product && props.product.price} рублей</p>
                                 </div>
                                 <div className="button-product-cart">
-                                    <Delete onClick={() => props.removeItem(props.product)} className="delite_icon" ></Delete>
+                                    <Delete onClick={() => removeFromCart(product)} className="delite_icon" ></Delete>
                                     <Eye className="eye_icon"></Eye>
                                 </div>
                             </div>
@@ -43,7 +45,7 @@ const Cart = (props) => {
                         <div className="mess_price_block">
                             <div className="messanger">
                                 <p className="messanger_text">оставьте, пожалуйста, телефон или ссылку на любой мессенджер</p>
-                                <input className="messanger_input" type='text' placeholder='@samplename'/>
+                                <input className="messanger_input" type='text' onChange={handlePhoneInputChange} placeholder='@samplename'/>
                             </div>
                             <div className="price-block-img animated">
                                 <Price className="price" ></Price>

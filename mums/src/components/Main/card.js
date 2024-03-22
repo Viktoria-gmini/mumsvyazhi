@@ -8,23 +8,25 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import Lottie from 'lottie-react-web';
-import animationData from '../Animation - 1702822230496.json';
+import animationData from '../loader.json';
 import {ReactComponent as Basket} from '../../img/header/cart.svg';
-import { addToCart } from "../Cart"
+
 
 function Card(props) {
     const [Base64, setBase64] = useState([]);
     const [state, setState] = useState('');
     //модальное окно - обработка команд
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const { product, addToCart } = props;
 
+    const handleAddToCart = () => {
+        addToCart(product);
+    };
     const closeModal = () => {
       setModalIsOpen(false);
 
     };
-    export const addToCart = (product) => {
-        // ваша логика добавления в корзину
-    }
+
         const modalContent = (
             <div className="modal_window">
                 <div className="modal_card">
@@ -61,7 +63,7 @@ function Card(props) {
                             <div className="card-description-modal">
                                 <p className="card-description">{props.product.description}</p>
                             </div>
-                            <Basket onClick={() => addToCart(props.product)} className="modal-cart"></Basket>
+                            <Basket onClick={addToCart} className="modal-cart"></Basket>
                         </div>
                     </div>
                 </div>
@@ -71,6 +73,7 @@ function Card(props) {
         setState('cardIsPressed');
         setModalIsOpen(true);
     }
+
     const ids = props.product.images.map(image => {
         return image.id;
       }).flat();
@@ -160,5 +163,4 @@ function Card(props) {
         </nav>
     );
 }
-
 export default Card;
